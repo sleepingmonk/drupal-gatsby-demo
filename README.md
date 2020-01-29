@@ -1,3 +1,31 @@
+## Demo Details
+
+This is the code I used to Gatsby-ify my Drupal blog. Here are some deets to connect it to yours.
+
+ - Turn JSON API on in your Drupal project.
+ - Edit gatsby-config.js to set your base url.
+ - Have a `blog` content type.
+ - Uses a media entity reference field for blog images: `field_media_lead -> field_media_image` but use whatever you like and configure the query accordingly.
+ - Tweak it until it works.
+ 
+ ** Drupal 8.8 has an authentication thing to watch out for.  Not in this repo but it looks something like this: **
+ 
+ ```JS
+ resolve: `gatsby-source-drupal`,
+      options: {
+        baseUrl: `http://my.lndo.site/`,
+        apiBase: `jsonapi?consumerId=11f458e0-beb7-4f8e-9119-4f3d03c88448`,
+      },
+ ```
+ Consumer id can be found at /admin/config/services/consumer
+ 
+ 
+ ## Super helpful tutorials:
+ 
+ - Gatsby bootcamp: https://youtu.be/8t0vNu2fCCM
+ - Gatsby IS React so a foundation in React is useful if you're new to JS frontends: https://reactjs.org/tutorial/tutorial.html
+ 
+ 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
